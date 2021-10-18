@@ -1,10 +1,3 @@
-/*
- * utn_ops.h
- *
- *  Created on: 12 oct. 2021
- *      Author: agust
- */
-
 #ifndef UTN_OPS_H_
 #define UTN_OPS_H_
 
