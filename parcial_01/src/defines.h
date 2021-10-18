@@ -1,10 +1,3 @@
-/*
- * defines.h
- *
- *  Created on: 16 oct. 2021
- *      Author: agust
- */
-
 #ifndef DEFINES_H_
 #define DEFINES_H_
 
