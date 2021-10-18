@@ -1,0 +1,4 @@
+int initSalon(Salon* list, int len)
+{
+	int status = FALSE;
+}

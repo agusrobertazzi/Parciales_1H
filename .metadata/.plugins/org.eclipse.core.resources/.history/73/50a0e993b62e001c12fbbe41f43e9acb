@@ -1,0 +1,17 @@
+/*
+ ============================================================================
+ Name        : parcial_01.c
+ Author      : Agustín Robertazzi - 1H
+ Version     :
+ Copyright   : 
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	puts("Parcial 2021 1ra parte - 1H"); /* prints Parcial 2021 1ra parte - 1H */
+	return EXIT_SUCCESS;
+}

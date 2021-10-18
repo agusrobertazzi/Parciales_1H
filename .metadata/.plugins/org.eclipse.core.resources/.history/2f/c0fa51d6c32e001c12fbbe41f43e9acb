@@ -1,0 +1,18 @@
+#include "arcade.h"
+
+int initArcade(Arcade* list, int len)
+{
+	int status = FALSE;
+	int i;
+
+	if(list != NULL && len > 0)
+	{
+		status = TRUE;
+		for(i = 0; i < len; i++)
+		{
+			list[i].isEmpty = TRUE;
+		}
+	}
+
+	return status;
+}

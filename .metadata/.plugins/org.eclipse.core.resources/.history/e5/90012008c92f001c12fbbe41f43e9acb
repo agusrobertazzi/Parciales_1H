@@ -1,0 +1,26 @@
+#include "menu.h"
+
+void initMenu(void)
+{
+	int option;
+
+	do
+	{
+
+		puts("--------------------------------------");
+		puts("1. ALTA DE SALÓN");
+		puts("2. ELIMINAR SALÓN");
+		puts("3. IMPRIMIR SALONES");
+		puts("4. ALTA DE ARCADE");
+		puts("5. EDITAR ARCADE");
+		puts("6. ELIMINAR ARCADE");
+		puts("7. IMRPIMIR ARCADES");
+		puts("8. IMPRIMIR JUEGOS");
+		puts("9. MENÚ DE INFORMES");
+		puts("--------------------------------------");
+
+	}while(option != 9);
+
+}
+
+

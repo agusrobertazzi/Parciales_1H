@@ -1,0 +1,8 @@
+#include "salon.h"
+
+int initSalon(Salon* list, int len)
+{
+	int status = FALSE;
+
+	return status;
+}

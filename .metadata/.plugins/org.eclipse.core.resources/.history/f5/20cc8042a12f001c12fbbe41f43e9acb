@@ -1,0 +1,15 @@
+#include "informes.h"
+
+int informeCuatroArcades(Salon* listSalon, int lenSalon, Arcade* listArcade, int lenArcade)
+{
+	int status = FALSE;
+	int i;
+	int j;
+
+	if(listSalon != NULL && lenSalon > 0 && listArcade != NULL && lenArcade > 0)
+	{
+
+	}
+
+	return status;
+}

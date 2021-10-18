@@ -1,0 +1,38 @@
+#include "informes.h"
+
+int informeCuatroArcades(Salon* listSalon, int lenSalon, Arcade* listArcade, int lenArcade)
+{
+	int status = FALSE;
+	int i;
+	int j;
+	int cont = 0;
+
+	if(listSalon != NULL && lenSalon > 0 && listArcade != NULL && lenArcade > 0)
+	{
+		status = TRUE;
+
+		for(i = 0; i < lenSalon; i++)
+		{
+			if(listSalon[i].isEmpty == FALSE)
+			{
+				cont = 0;
+
+				for(j = 0; j < lenArcade; j++)
+				{
+					if(listArcade[j].isEmpty == FALSE && listArcade[j].idSalon == listSalon[i].id)
+					{
+						cont++;
+					}
+				}
+
+				if(cont > 4)
+				{
+
+				}
+
+			}
+		}
+	}
+
+	return status;
+}

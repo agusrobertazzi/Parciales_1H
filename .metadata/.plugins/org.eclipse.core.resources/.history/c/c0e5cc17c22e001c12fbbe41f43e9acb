@@ -1,0 +1,14 @@
+#include "salon.h"
+
+int initSalon(Salon* list, int len)
+{
+	int status = FALSE;
+	int i;
+
+	if(list != NULL && len > 0)
+	{
+
+	}
+
+	return status;
+}

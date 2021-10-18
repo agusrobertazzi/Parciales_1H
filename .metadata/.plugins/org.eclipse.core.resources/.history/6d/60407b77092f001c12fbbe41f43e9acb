@@ -1,0 +1,34 @@
+#include "arcade.h"
+#include "salon.h"
+
+static int getNewIdArcade(void)
+{
+	static int counter = 0;
+
+	return(counter++);
+}
+
+int initArcade(Arcade* list, int len)
+{
+	int status = FALSE;
+	int i;
+
+	if(list != NULL && len > 0)
+	{
+		status = TRUE;
+		for(i = 0; i < len; i++)
+		{
+			list[i].isEmpty = TRUE;
+		}
+	}
+
+	return status;
+}
+
+int addArcade(Arcade* list, int len)
+{
+	int status = FALSE;
+
+
+	return status;
+}

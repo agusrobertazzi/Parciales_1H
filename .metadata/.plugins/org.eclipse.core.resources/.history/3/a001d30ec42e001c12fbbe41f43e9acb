@@ -1,0 +1,33 @@
+#include "salon.h"
+
+static int getNewIdSalon(void)
+{
+	static int counter = 0;
+
+	return(counter++);
+}
+
+int initSalon(Salon* list, int len)
+{
+	int status = FALSE;
+	int i;
+
+	if(list != NULL && len > 0)
+	{
+		status = TRUE;
+		for(i = 0; i < len; i++)
+		{
+			list[i].isEmpty = TRUE;
+		}
+	}
+
+	return status;
+}
+
+int addSalon(Salon* list, int len)
+{
+	int status = FALSE;
+
+	return status;
+}
+

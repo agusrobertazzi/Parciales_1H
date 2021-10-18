@@ -1,0 +1,44 @@
+#include "menu.h"
+
+void initMenu(void)
+{
+	int option;
+
+	puts("--------------------------------------");
+	puts("BIENVENIDO AL PROGRAMA");
+	puts("--------------------------------------");
+	puts("");
+	puts("");
+
+	do
+	{
+
+		// Comienza menú
+		puts("--------------------------------------");
+		puts("1. ALTA DE SALÓN");
+		puts("2. ELIMINAR SALÓN");
+		puts("3. IMPRIMIR SALONES");
+		puts("4. ALTA DE ARCADE");
+		puts("5. EDITAR ARCADE");
+		puts("6. ELIMINAR ARCADE");
+		puts("7. IMRPIMIR ARCADES");
+		puts("8. IMPRIMIR JUEGOS");
+		puts("9. MENÚ DE INFORMES");
+		puts("10. SALIR");
+		puts("--------------------------------------");
+
+		ingresoIntMinMax(&option, "Ingrese opción: ", "Número no válido. Ingrese nuevamente: ", 1, 10);
+		// Cierre de menú
+
+
+	}while(option != 10);
+
+	puts("");
+	puts("");
+	puts("--------------------------------------");
+	puts("GRACIAS POR USAR EL PROGRAMA");
+	puts("--------------------------------------");
+
+}
+
+

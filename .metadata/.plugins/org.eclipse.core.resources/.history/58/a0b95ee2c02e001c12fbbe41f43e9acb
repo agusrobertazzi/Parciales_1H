@@ -1,0 +1,22 @@
+/*
+ * salon.h
+ *
+ *  Created on: 16 oct. 2021
+ *      Author: agust
+ */
+
+#ifndef SALON_H_
+#define SALON_H_
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "utn_ops.h"
+
+#define TRUE 0
+#define FALSE -1
+#define SALON 0
+#define SHOPPING 1
+
+
+#endif /* SALON_H_ */

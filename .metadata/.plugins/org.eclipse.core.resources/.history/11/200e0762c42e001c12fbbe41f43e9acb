@@ -1,0 +1,48 @@
+#include "salon.h"
+
+static int getNewIdSalon(void)
+{
+	static int counter = 0;
+
+	return(counter++);
+}
+
+int initSalon(Salon* list, int len)
+{
+	int status = FALSE;
+	int i;
+
+	if(list != NULL && len > 0)
+	{
+		status = TRUE;
+		for(i = 0; i < len; i++)
+		{
+			list[i].isEmpty = TRUE;
+		}
+	}
+
+	return status;
+}
+
+int addSalon(Salon* list, int len)
+{
+	int status = FALSE;
+	int i;
+
+	if(list != NULL && len > 0)
+	{
+		for(i = 0; i < len; i++)
+		{
+			if(list[i].isEmpty == TRUE)
+			{
+				status = TRUE;
+				list[i].isEmpty = FALSE;
+				list[i].id = getNewIdSalon();
+				ingresoCadena(name, 100, "Ingrese el nombre del salon: ", "")
+			}
+		}
+	}
+
+	return status;
+}
+

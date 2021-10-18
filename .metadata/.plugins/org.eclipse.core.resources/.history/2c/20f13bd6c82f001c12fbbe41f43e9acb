@@ -1,0 +1,14 @@
+#include "menu.h"
+
+void initMenu(void)
+{
+	int option;
+
+	do
+	{
+
+	}while(option != 9);
+
+}
+
+
