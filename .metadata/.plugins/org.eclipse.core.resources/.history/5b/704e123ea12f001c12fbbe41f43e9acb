@@ -1,8 +1,0 @@
-#include "informes.h"
-
-int informeCuatroArcades(Salon* listSalon, int lenSalon, Arcade* listArcade, int lenArcade)
-{
-	int status = FALSE;
-
-	return status;
-}
