@@ -1,10 +1,3 @@
-/*
- * informes.h
- *
- *  Created on: 17 oct. 2021
- *      Author: agust
- */
-
 #ifndef INFORMES_H_
 #define INFORMES_H_
 
