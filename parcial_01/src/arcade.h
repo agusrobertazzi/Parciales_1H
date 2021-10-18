@@ -1,10 +1,3 @@
-/*
- * arcade.h
- *
- *  Created on: 16 oct. 2021
- *      Author: agust
- */
-
 #ifndef ARCADE_H_
 #define ARCADE_H_
 
