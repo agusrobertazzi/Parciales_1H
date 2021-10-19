@@ -310,7 +310,7 @@ int contadorJuegos(Arcade* list, int len, char ingreso[])
 			strcpy(aux, list[i].gameName);
 			strlwr(aux);
 
-			if(list[i].isEmpty && strcmp(ingreso, aux) == 0)
+			if(list[i].isEmpty == FALSE && strcmp(ingreso, aux) == 0)
 			{
 				cont++;
 			}
