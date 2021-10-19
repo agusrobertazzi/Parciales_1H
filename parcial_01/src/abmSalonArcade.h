@@ -1,10 +1,3 @@
-/*
- * abmSalonArcade.h
- *
- *  Created on: 17 oct. 2021
- *      Author: agust
- */
-
 #ifndef ABMSALONARCADE_H_
 #define ABMSALONARCADE_H_
 

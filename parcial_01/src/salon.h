@@ -1,10 +1,3 @@
-/*
- * salon.h
- *
- *  Created on: 16 oct. 2021
- *      Author: agust
- */
-
 #ifndef SALON_H_
 #define SALON_H_
 

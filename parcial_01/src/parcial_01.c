@@ -1,10 +1,10 @@
 /*
  ============================================================================
  Name        : parcial_01.c
- Author      : Agustín Robertazzi - 1H
+ Author      : AgustÃ­n Robertazzi - 1H
  Version     :
  Copyright   : 
- Description : Hello World in C, Ansi-style
+ Description : Parcial_01
  ============================================================================
  */
 
