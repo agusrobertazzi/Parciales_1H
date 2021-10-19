@@ -1,3 +1,0 @@
-#include "arcade.h"
-
-initArcade(Arcade* list, int len)

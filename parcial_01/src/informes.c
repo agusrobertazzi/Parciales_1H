@@ -216,7 +216,7 @@ int listarMasCantidad(Arcade* listArcade, int lenArcade, Salon* listSalon, int l
 				cont = 0;
 				for(j = 0; j < lenArcade; j++)
 				{
-					if(listArcade[j].isEmpty && listArcade[j].idSalon == listSalon[i].id)
+					if(listArcade[j].isEmpty == FALSE && listArcade[j].idSalon == listSalon[i].id)
 					{
 						cont++;
 					}
