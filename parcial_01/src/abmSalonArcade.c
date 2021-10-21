@@ -90,4 +90,41 @@ int deleteSalon(Salon* listSalon, int lenSalon, int id, Arcade* listArcade, int 
 	return status;
 }
 
+int salonForzado(Salon* list, int len, int pos, int id,char* name, char* adress, int type)
+{
+	int status = FALSE;
 
+	if(pos >= 0 && pos <= len)
+	{
+		status = TRUE;
+
+		list[pos].isEmpty = FALSE;
+		list[pos].id = id;
+		strncpy(list[pos].name, name, 100);
+		strncpy(list[pos].adress, adress, 100);
+		list[pos].type = type;
+	}
+
+	return status;
+}
+
+int arcadeForzado(Arcade* list, int len, int pos, int id, char* country, int type, int player, int maxAmount, int idSalon, char* gameName)
+{
+	int status = FALSE;
+
+	if(pos >= 0 && pos <= len)
+	{
+		status = TRUE;
+
+		list[pos].isEmpty = FALSE;
+		list[pos].id = id;
+		strncpy(list[pos].country, country, 100);
+		list[pos].type = type;
+		list[pos].players = player;
+		list[pos].maxAmount = maxAmount;
+		list[pos].idSalon = idSalon;
+		strncpy(list[pos].gameName, gameName, 63);
+	}
+
+	return status;
+}

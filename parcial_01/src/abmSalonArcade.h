@@ -11,5 +11,8 @@
 
 int addArcade(Arcade* listArcade, int lenArcade, Salon* listSalon, int lenSalon);
 int deleteSalon(Salon* listSalon, int lenSalon, int id, Arcade* listArcade, int lenArcade);
+// Forzadas
+int salonForzado(Salon* list, int len, int pos, int id,char* name, char* adress, int type);
+int arcadeForzado(Arcade* list, int len, int pos, int id, char* country, int type, int player, int maxAmount, int idSalon, char* gameName);
 
 #endif /* ABMSALONARCADE_H_ */

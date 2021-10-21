@@ -140,6 +140,7 @@ int printGames(Arcade* list, int len)
 					if(strcmp(list[i].gameName, list[j].gameName) == 0)
 					{
 						flag = TRUE;
+						break;
 					}
 				}
 				if(flag == FALSE)

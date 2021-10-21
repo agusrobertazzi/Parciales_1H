@@ -322,3 +322,92 @@ int contadorJuegos(Arcade* list, int len, char ingreso[])
 
 	return status;
 }
+
+
+// PARTE 2 DEL EXAMEN
+int salonCompleto(Salon* listSalon, int lenSalon, Arcade* listArcade, int lenArcade)
+{
+	int status;
+	int i;
+	int j;
+	int cont;
+
+	if(listSalon != NULL && lenSalon > 0 && listArcade != NULL && lenArcade > 0)
+	{
+		status = TRUE;
+
+		puts("--------------------------------------");
+		for(i = 0; i < lenSalon; i++)
+		{
+			if(listSalon[i].isEmpty == FALSE)
+			{
+				cont = 0;
+				for(j = 0; j < lenArcade; j++)
+				{
+					if(listSalon[i].id == listArcade[j].idSalon && listArcade[j].players > 2 && listArcade[j].isEmpty == FALSE)
+					{
+						cont++;
+					}
+				}
+
+				if(cont >= 8)
+				{
+					switch(listSalon[i].type)
+					{
+					case 0:
+						printf("Salón #%d || Nombre: %s || Dirección: %s || LOCAL\n", listSalon[i].id, listSalon[i].name, listSalon[i].adress);
+						break;
+					case 1:
+						printf("Salón #%d || Nombre: %s || Dirección: %s || SHOPPING\n", listSalon[i].id, listSalon[i].name, listSalon[i].adress);
+						break;
+					}
+				}
+			}
+		}
+		puts("--------------------------------------");
+
+	}
+
+	return status;
+}
+
+int promedioSalonArcade(Salon* listSalon, int lenSalon, Arcade* listArcade, int lenArcade)
+{
+	int status = FALSE;
+	int i;
+	int j;
+	int contSalon = 0;
+	int contArcade = 0;
+	float promedio;
+
+	if(listSalon != NULL && lenSalon > 0 && listArcade != NULL && lenArcade > 0)
+	{
+		status = TRUE;
+
+		for(i = 0; i < lenSalon; i++)
+		{
+			if(listSalon[i].isEmpty == FALSE)
+			{
+				contSalon++;
+				for(j = 0; j < lenArcade; j++)
+				{
+					if(listSalon[i].id == listArcade[j].idSalon && listArcade[j].isEmpty == FALSE)
+					{
+						contArcade++;
+					}
+				}
+
+			}
+		}
+
+		promedio = (float)contArcade / contSalon;
+
+
+		puts("--------------------------------------");
+		printf("La cantidad de arcades por salón promedio es de: %f\n", promedio);
+		puts("--------------------------------------");
+
+	}
+
+	return status;
+}

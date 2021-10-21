@@ -25,6 +25,33 @@ void initMenu(void)
 	initSalon(salon, SALONES_LEN);
 	initArcade(arcade, ARCADE_LEN);
 
+	// ALTAS FORZADAS
+
+	salonForzado(salon, SALONES_LEN, 0, 0, "SalonUno", "SalonUno", 0);
+	salonForzado(salon, SALONES_LEN, 1, 1, "SalonDos", "SalonDos", 0);
+	salonForzado(salon, SALONES_LEN, 2, 2, "SalonTres", "SalonTres", 0);
+	contSalon += 3;
+
+	arcadeForzado(arcade, ARCADE_LEN, 0, 0, "Arg", 0, 6, 10, 0, "Mario Bros");
+	arcadeForzado(arcade, ARCADE_LEN, 1, 1, "Arg", 0, 6, 10, 0, "Pac man");
+	arcadeForzado(arcade, ARCADE_LEN, 2, 2, "Arg", 0, 6, 10, 0, "CS:GO");
+	arcadeForzado(arcade, ARCADE_LEN, 3, 3, "Arg", 0, 6, 10, 0, "Rocket League");
+	arcadeForzado(arcade, ARCADE_LEN, 4, 4, "Arg", 0, 6, 10, 0, "Mario Bros");
+	arcadeForzado(arcade, ARCADE_LEN, 5, 5, "Arg", 0, 6, 10, 0, "Mario Bros");
+	arcadeForzado(arcade, ARCADE_LEN, 6, 6, "Arg", 0, 6, 10, 0, "Mario Bros");
+	arcadeForzado(arcade, ARCADE_LEN, 7, 7, "Arg", 0, 6, 10, 0, "Mario Bros");
+	arcadeForzado(arcade, ARCADE_LEN, 8, 8, "Arg", 0, 6, 10, 0, "Mario Bros");
+	arcadeForzado(arcade, ARCADE_LEN, 9, 9, "Arg", 0, 6, 10, 1, "Mario Bros");
+	arcadeForzado(arcade, ARCADE_LEN, 10, 10, "Arg", 0, 6, 10, 1, "Mario Bros");
+	arcadeForzado(arcade, ARCADE_LEN, 11, 11, "Arg", 0, 6, 10, 1, "Mario Bros");
+	arcadeForzado(arcade, ARCADE_LEN, 12, 12, "Arg", 0, 6, 10, 1, "Mario Bros");
+	arcadeForzado(arcade, ARCADE_LEN, 13, 13, "Arg", 0, 6, 10, 1, "Mario Bros");
+	arcadeForzado(arcade, ARCADE_LEN, 14, 14, "Arg", 0, 6, 10, 1, "Rocket League");
+	arcadeForzado(arcade, ARCADE_LEN, 15, 15, "Arg", 0, 6, 10, 1, "Mario Bros");
+	arcadeForzado(arcade, ARCADE_LEN, 16, 16, "Arg", 0, 6, 10, 1, "Mario Bros");
+	arcadeForzado(arcade, ARCADE_LEN, 17, 17, "Arg", 0, 6, 10, 1, "Mario Bros");
+	contArcade+=12;
+
 	do
 	{
 		// Comienza menú
@@ -259,9 +286,11 @@ void initMenu(void)
 				puts("5. Imprimir el salón con más cantidad de arcades");
 				puts("6. Imprimir el monto máximo en pesos que puede recaudar un salón");
 				puts("7. ¿Cuantos arcades tiene un juego?");
+				puts("8. ¿Cuantos salones completos existen?");
+				puts("9. Promedio de arcades por salon");
 				puts("--------------------------------------");
 
-				ingresoIntMinMax(&subOption, "Ingrese opción: ", "Número no válido. Ingrese nuevamente: ", 1, 7);
+				ingresoIntMinMax(&subOption, "Ingrese opción: ", "Número no válido. Ingrese nuevamente: ", 1, 9);
 
 				switch(subOption)
 				{
@@ -418,6 +447,48 @@ void initMenu(void)
 						ingresoCadena(entry, 63, "Ingrese el nombre del juego que desea buscar: ", "Error. Intente nuevamente: ");
 
 						if(contadorJuegos(arcade, ARCADE_LEN, entry) == FALSE)
+						{
+							puts("--------------------------------------");
+							puts("¡Algo salió mal!");
+							puts("--------------------------------------");
+						}
+					}
+					else
+					{
+						puts("--------------------------------------");
+						puts("¡No hay salones y/o arcades cargados!");
+						puts("--------------------------------------");
+					}
+
+					break;
+				case 8:
+					if(contSalon > 0 && contArcade > 0)
+					{
+						if(salonCompleto(salon, SALONES_LEN, arcade, ARCADE_LEN) != FALSE)
+						{
+							puts("--------------------------------------");
+							puts("¡Impresión finalizada!");
+							puts("--------------------------------------");
+						}
+						else
+						{
+							puts("--------------------------------------");
+							puts("¡Algo salió mal!");
+							puts("--------------------------------------");
+						}
+
+					}
+					else
+					{
+						puts("--------------------------------------");
+						puts("¡No hay salones y/o arcades cargados!");
+						puts("--------------------------------------");
+					}
+					break;
+				case 9:
+					if(contSalon > 0 && contArcade > 0)
+					{
+						if(promedioSalonArcade(salon, SALONES_LEN, arcade, ARCADE_LEN) == FALSE)
 						{
 							puts("--------------------------------------");
 							puts("¡Algo salió mal!");

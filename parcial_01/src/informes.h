@@ -15,5 +15,8 @@ int listarArcades(Arcade* listArcade, int lenArcade, Salon* listSalon, int lenSa
 int listarMasCantidad(Arcade* listArcade, int lenArcade, Salon* listSalon, int lenSalon);
 int calcularValor(Arcade* list, int len, int id, int value);
 int contadorJuegos(Arcade* list, int len, char ingreso[]);
+// PARTE 2 DEL EXAMEN
+int salonCompleto(Salon* listSalon, int lenSalon, Arcade* listArcade, int lenArcade);
+int promedioSalonArcade(Salon* listSalon, int lenSalon, Arcade* listArcade, int lenArcade);
 
 #endif /* INFORMES_H_ */
