@@ -12,6 +12,7 @@ void init_menu(void)
 	int index;
 	int idFound;
 	int flagCarga = FALSE;
+	int flagDupl = FALSE;
 
 	puts("-----------------------------------");
 	puts("Bienvenido al programa");
@@ -261,17 +262,28 @@ void init_menu(void)
 				case 8:
 					if(ll_len(list) > 0)
 					{
-						if(controller_duplCoins(list) != FALSE)
+						if(flagDupl == FALSE)
 						{
-							puts("-----------------------------------");
-							puts("Operación realizada");
-							puts("-----------------------------------");
-							puts("\n\n\n");
+							if(controller_duplCoins(list) != FALSE)
+							{
+								flagDupl = TRUE;
+								puts("-----------------------------------");
+								puts("Operación realizada");
+								puts("-----------------------------------");
+								puts("\n\n\n");
+							}
+							else
+							{
+								puts("-----------------------------------");
+								puts("No se ha podido realizar la operación");
+								puts("-----------------------------------");
+								puts("\n\n\n");
+							}
 						}
 						else
 						{
 							puts("-----------------------------------");
-							puts("No se ha podido realizar la operación");
+							puts("Ya has duplicado las fichas. Para volver a hacerlo, reiniciá el programa");
 							puts("-----------------------------------");
 							puts("\n\n\n");
 						}
@@ -285,7 +297,10 @@ void init_menu(void)
 					}
 					break;
 				case 9:
-					controller_saveArcades("data/arcadesGenerated.csv", list);
+					if(ll_len(list) > 0)
+					{
+						controller_saveArcades("data/arcadesGenerated.csv", list);
+					}
 					puts("-----------------------------------");
 					puts("Gracias por usar la APP");
 					puts("-----------------------------------");
